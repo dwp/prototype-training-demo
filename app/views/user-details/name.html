@@ -1,1 +1,32 @@
-Training starts here
+{% extends "layouts/main.html" %}
+
+{% set pageName="What is your name?" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form action="date-of-birth" method="post" novalidate>
+
+            <div class="govuk-form-group">
+
+                <h1 class="govuk-label-wrapper">
+                    <label class="govuk-label govuk-label--l" for="full-name">
+                        {{ pageName }}
+                    </label>
+                </h1>
+
+                <input class="govuk-input" id="full-name" name="fullName" type="text" spellcheck="false" autocomplete="name">
+            </div>
+
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+
+        </form>
+        
+    </div>
+</div>
+
+{% endblock %}
